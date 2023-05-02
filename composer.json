@@ -23,6 +23,5 @@
                 "jump": "src/config/jump.php"
             }
         }
-    },
-    "minimum-stability": "dev"
+    }
 }
