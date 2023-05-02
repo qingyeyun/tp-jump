@@ -1,0 +1,27 @@
+{
+    "name": "qingyeyun/tp-jump",
+    "type": "think-extend",
+    "require": {
+        "php": ">=7.2.5",
+        "topthink/framework": "^6.0"
+    },
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "xiaoye",
+            "email": "hi@ziye.cc"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "qingyeyun\\jump\\": "src/"
+        }
+    },
+    "extra": {
+        "think": {
+            "config": {
+                "jump": "src/config/jump.php"
+            }
+        }
+    }
+}
