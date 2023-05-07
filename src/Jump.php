@@ -19,6 +19,10 @@ trait Jump
      */
     protected $app;
 
+
+    protected $isMessage = false;
+    protected $isResult = false;
+
     /**
      * 构造方法
      * @access public
@@ -121,11 +125,18 @@ trait Jump
         $result = [
             'code' => $code,
             'msg' => $msg,
-            'message'=>$msg,
             'time' => time(),
             'data' => $data,
-            'result' => $data,
         ];
+
+        if ($this->isMessage) {
+            $result['message'] = $msg;
+            unset($result['msg']);
+        }
+        if ($this->isResult) {
+            $result['result'] = $data;
+            unset($result['data']);
+        }
 
         $type = $type ?: $this->getResponseType();
         $response = Response::create($result, $type)->header($header);
