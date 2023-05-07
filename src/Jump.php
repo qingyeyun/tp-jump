@@ -124,6 +124,7 @@ trait Jump
             'message'=>$msg,
             'time' => time(),
             'data' => $data,
+            'result' => $data,
         ];
 
         $type = $type ?: $this->getResponseType();
