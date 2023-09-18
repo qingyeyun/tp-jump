@@ -120,7 +120,7 @@ trait Jump
      * @param  array $header 发送的Header信息
      * @return void
      */
-    protected function result($data, $code = 0, $msg = '', string $type = 'json', array $header = [])
+    protected function result($data, $code = 1, $msg = '', string $type = 'json', array $header = [])
     {
         $result = [
             'code' => $code,
